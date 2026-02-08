@@ -419,7 +419,6 @@ fn create_controls(_parent_widget: &gtk4::Box) -> ControlsHandle {
     });
     container.add_controller(motion);
 
-
     let prev_btn = create_media_control_button(
         &icons,
         "skip_previous",
