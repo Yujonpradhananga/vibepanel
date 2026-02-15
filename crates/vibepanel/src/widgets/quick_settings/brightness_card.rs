@@ -15,14 +15,14 @@ use crate::services::icons::IconHandle;
 use crate::styles::qs;
 
 pub fn brightness_icon_name(percent: u32) -> &'static str {
-    if percent >= 100 {
-        "display-brightness-high-symbolic"
-    } else if percent >= 66 {
-        "display-brightness-symbolic"
-    } else if percent >= 33 {
+    if percent == 0 {
+        "display-brightness-off-symbolic"
+    } else if percent < 33 {
+        "display-brightness-low-symbolic"
+    } else if percent < 67 {
         "display-brightness-medium-symbolic"
     } else {
-        "display-brightness-low-symbolic"
+        "display-brightness-high-symbolic"
     }
 }
 /// State for the Brightness card in the Quick Settings panel.
